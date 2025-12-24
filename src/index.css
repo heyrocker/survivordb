@@ -1,0 +1,202 @@
+:root {
+  /* Official Survivor Colors */
+  --survivor-green: #00AB50;
+  --survivor-green-dark: #008C42;
+  --survivor-blue: #358BBD;
+  --survivor-blue-dark: #2A6F96;
+  --survivor-black: #1A1A1A;
+  --survivor-khaki: #8B7355;
+  --survivor-gold: #C9A227;
+  
+  /* UI Colors */
+  --sand: #D4C8B0;
+  --sand-light: #E5DBC8;
+  --bone: #F0EAE0;
+  --header: #F5EEE1;
+  --cream: #FAF7F2;
+  --bark: #2C2620;
+  --bark-light: #5C5044;
+}
+    
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Survivant'; /* Choose a name for your font */
+  src: url('/assets/fonts/survivant.ttf') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Outfit';
+  background-color: var(--sand-light);
+  margin: 0px;
+}
+
+.title-text {
+  font-family: 'Survivant';
+  font-size: 2rem;
+}
+
+.title-highlight {
+  color: var(--survivor-green);
+}
+
+header {
+  background-color: var(--header);
+  margin: 0px;
+  border-bottom: 1px solid rgba(74, 63, 53, 0.1);
+  padding: 10px 30px;
+}
+
+main {
+  padding: 80px 30px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.main-nav {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  list-style: none;
+}
+
+.main-nav > li {
+  margin-right: 35px;
+  font-family: 'Outfit';
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--bark-light);
+}
+
+.season-badge {
+  display: inline-flex;
+  background-color: var(--survivor-green-dark);
+  padding: 8px 20px;
+  margin-bottom: 20px;
+  color: white;
+  border-radius: 4px;
+}
+
+h1, 
+h2,
+h3 {
+  margin: 0px;
+  font-size: 4rem;
+  font-family: 'Bebas Neue', sans-serif;
+  color: var(--bark);
+}
+
+h2 {
+  font-size: 3rem;
+  margin-bottom: 5px;
+}
+
+h3 {
+  font-size: 1.74rem;
+  text-transform: none;
+  margin-bottom: 5px;
+}
+
+.season-information-section {
+  line-height: .5;
+  font-weight: 200;
+  margin-bottom: 30px;
+}
+
+
+.season-pagination {
+  display: inline-flex;
+  margin-bottom: 40px;
+}
+
+.season-pagination-button {
+  padding: 8px 20px;
+  margin-right: 20px;
+  background-color: var(--cream);
+  border-radius: 4px;
+}
+
+.season-pagination-button:hover {
+  background-color: var(--survivor-green-dark);
+}
+
+.players-section {
+  margin-bottom: 40px;
+}
+.player {
+  background-color: var(--cream);
+  border-radius: 15px;
+}
+.player-info > p {
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.player-img {
+  border-radius: 15px 15px 0px 0px;
+}
+
+.player-info {
+  padding-top: 10px;
+  padding-left: 15px;
+}
+
+.players-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.episodes-list {
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.episode-row {
+  display: grid;
+  grid-template-columns: 4fr 1fr 1fr;
+  padding: 0px 15px;
+  background-color: var(--bone);
+  align-items: center;
+  border-top: 1px solid lightgray;
+  column-gap: 25px;
+}
+
+.episode-row:hover {
+  background-color: var(--sand);
+}
+
+.episode-header {
+  background-color: var(--survivor-blue);
+  font-weight: 600;
+  letter-spacing: .5;
+  border: none;
+}
+
+.episode-header:hover {
+  background-color: var(--survivor-blue);
+}
+
+.episode-row small {
+  padding-top: 10px;
+  display: block;
+}
+
+.episode-title {
+  font-weight: 500;
+}
+
+@media (min-width: 769px {
+  .players-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
