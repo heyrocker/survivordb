@@ -104,5 +104,31 @@ export const playersData = [
     birthday: "August 3, 1984",
     img: "../assets/images/amanda-kimmel.jpg"
   },
+  {
+    name: "Mary Sartain",
+    birthday: "August 3, 1984",
+    img: "../assets/images/amanda-kimmel.jpg"
+  },
+  {
+    name: "Johnny 'Fairplay' Dalton",
+    birthday: "August 3, 1984",
+    img: "../assets/images/amanda-kimmel.jpg"
+  },
+]
 
+export const episodeData = [
+  {
+    episodeNumber: 1,
+    episodeTitle: "You Guys Are Dumber Than You Look",
+    episodeSummary: "Ten fans arrived on a tropical island and learned that they would compete against ten returning players.",
+    episodeAirDate: "February 7, 2008",
+    episodeBoot: "Johnny 'Fairplay' Dalton"
+  },
+  {
+    episodeNumber: 2,
+    episodeTitle: "The Sounds Of Jungle Love",
+    episodeSummary: "Airai struggled to make camp. Chet, Kathy and Tracy felt shunned by their younger tribemates and built their own shelter, then a second was built for the other tribe members. At Malakal, the Amanda-Ozzy and Parvati-James couples grew closer, to the concern of Jonathan and Cirie.",
+    episodeAirDate: "February 14, 2008",
+    episodeBoot: "Mary Sartain"
+  }
 ]
