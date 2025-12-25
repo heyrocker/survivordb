@@ -14,7 +14,6 @@
 // }
 
 export default function SeasonInformation(props) {
-  console.log(props)
 
   return (
     <>

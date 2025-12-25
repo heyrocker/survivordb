@@ -13,3 +13,15 @@ export const seasonData = {
   nextEpisodeNumber: 17
 }
 
+export const playersData = [
+  {
+    name: "Parvati Shallow",
+    birthday: "September 21, 1982",
+    img: "../assets/images/parvati-shallow.jpg"
+  },
+  {
+    name: "Amanda Kimmel",
+    birthday: "August 3, 1984",
+    img: "../assets/images/amanda-kimmel.jpg"
+  }
+]

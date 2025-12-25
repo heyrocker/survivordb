@@ -1,7 +1,19 @@
-import {seasonData} from "../../assets/data/season_16.js"
+import { seasonData, playersData } from "../../assets/data/season_16.js"
 import SeasonInformation from "./SeasonInformation"
+import PlayerTeaser from "./PlayerTeaser"
+
+console.log(playersData)
 
 export default function MainContent() {
+
+  const players = playersData.map((player) => {
+    return (
+      <PlayerTeaser 
+        {...player}
+      />
+    )
+  })
+
   return (
     <main>
       <SeasonInformation 
@@ -13,18 +25,7 @@ export default function MainContent() {
       <section className="players-section">
         <h2>Castaways</h2>
         <div className="players-grid">
-          <div className="player" width="100%">
-            <img className="player-img" src="/assets/images/parvati-shallow.jpg" width="100%"></img>
-            <div className="player-info">
-              <h3>Parvati Shallow</h3>
-            </div>
-          </div>
-          <div className="player" width="100%">
-            <img className="player-img" src="/assets/images/amanda-kimmel.jpg" width="100%"></img>
-            <div className="player-info">
-              <h3>Amanda Kimmel</h3>
-            </div>
-          </div>
+          {players}         
         </div>
       </section>
 
