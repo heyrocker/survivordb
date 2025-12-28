@@ -14,7 +14,7 @@
 // }
 
 export default function SeasonInformation(props) {
-  console.log(props)
+
   return (
     <>
       <section className="season-title-section">
@@ -34,11 +34,6 @@ export default function SeasonInformation(props) {
         <p><span className="information-title">Castaways:</span> {props.castaways}</p>
         <p><span className="information-title">Days:</span> {props.days}</p>
         <p><span className="information-title">Episodes:</span> {props.episodes}</p>
-      </section>
-
-      <section className="season-pagination">
-        <div className="season-pagination-button season-pagination-previous">&lt; Season {props.seasonNumber - 1}</div>
-        <div className="season-pagination-button season-pagination-next">Season {props.seasonNumber + 1} &gt;</div>
       </section>
     </>
   )
