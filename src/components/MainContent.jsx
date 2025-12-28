@@ -3,7 +3,8 @@ import SeasonInformation from "./SeasonInformation"
 import PlayerTeaser from "./PlayerTeaser"
 import EpisodeTableEntry from "./EpisodeTableEntry"
 
-console.log(playersData)
+let seasonNumber = 16
+let seasonInfo = seasonData[seasonNumber]
 
 export default function MainContent() {
 
@@ -26,8 +27,7 @@ export default function MainContent() {
   return (
     <main>
       <SeasonInformation 
-        id={16}
-        {...seasonData}
+        {...seasonInfo}
       />
 
       {/* Players Grid */}
