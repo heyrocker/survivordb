@@ -4,14 +4,10 @@ import SeasonInformation from "./SeasonInformation"
 import PlayerTeaser from "./PlayerTeaser"
 import EpisodeTableEntry from "./EpisodeTableEntry"
 
-let seasonNumber = 16;
-
-export default function MainContent() {
-  let [seasonInfo, setSeasonInfo] = React.useState(seasonData[seasonNumber])
-  seasonNumber = seasonInfo.seasonNumber
-  let nextSeason = seasonNumber + 1
-  let previousSeason = seasonNumber -1
-
+export default function MainContent(props) {
+  const [seasonInfo, setSeasonInfo] = React.useState(seasonData[props.seasonNumber])
+  const nextSeason = seasonInfo.seasonNumber + 1
+  const previousSeason = seasonInfo.seasonNumber - 1
 
   const players = playersData.map((player) => {
     return (
@@ -29,8 +25,9 @@ export default function MainContent() {
     )
   })
 
-  function handleSeasonNavClick(season, event) {
-    setSeasonInfo(seasonData[season])
+  function handleSeasonNavClick(seasonNumber, event) {
+    console.log(seasonNumber)
+    setSeasonInfo(seasonData[seasonNumber])
   }
 
   return (
