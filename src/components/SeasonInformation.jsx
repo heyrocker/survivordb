@@ -15,6 +15,12 @@
 
 export default function SeasonInformation(props) {
 
+  const options = { year: 'numeric', month: 'long', day: 'numeric' }; 
+  const airingStartDate = new Date(props.airingStartDate).toLocaleDateString("en-US", options)
+  const airingEndDate = new Date(props.airingEndDate).toLocaleDateString("en-US", options)
+  const filmingStartDate = new Date(props.filmingStartDate).toLocaleDateString("en-US", options)
+  const filmingEndDate = new Date(props.filmingEndDate).toLocaleDateString("en-US", options)
+
   return (
     <>
       <section className="season-title-section">
@@ -29,8 +35,8 @@ export default function SeasonInformation(props) {
 
       <section className="season-information-section">
         <p><span className="information-title">Location:</span> {props.location} </p>
-        <p><span className="information-title">Filming Dates:</span> {props.filmingStartDate} - {props.filmingEndDate}</p>
-        <p><span className="information-title">Air Dates:</span> {props.airingStartDate} - {props.airingEndDate}</p>
+        <p><span className="information-title">Filming Dates:</span> {filmingStartDate} - {filmingEndDate}</p>
+        <p><span className="information-title">Air Dates:</span> {airingStartDate} - {airingEndDate}</p>
         <p><span className="information-title">Castaways:</span> {props.castaways}</p>
         <p><span className="information-title">Days:</span> {props.days}</p>
         <p><span className="information-title">Episodes:</span> {props.episodes}</p>

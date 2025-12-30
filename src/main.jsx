@@ -5,7 +5,7 @@ import MainContent from "./components/MainContent.jsx"
 const root = createRoot(document.getElementById("root"))
 
 function Page() {
-  const defaultSeason = 16
+  const defaultSeason = 47
 
   return (
     <>

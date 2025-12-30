@@ -1,5 +1,6 @@
 import React from "react"
-import { seasonData, playersData, episodeData } from "../../assets/data/season_16.js"
+import { playersData, episodeData } from "../../assets/data/season_16.js"
+import { seasonData } from "../../assets/data/survivor_seasons.js"
 import SeasonInformation from "./SeasonInformation"
 import PlayerTeaser from "./PlayerTeaser"
 import EpisodeTableEntry from "./EpisodeTableEntry"
@@ -26,7 +27,6 @@ export default function MainContent(props) {
   })
 
   function handleSeasonNavClick(seasonNumber, event) {
-    console.log(seasonNumber)
     setSeasonInfo(seasonData[seasonNumber])
   }
 
@@ -37,8 +37,8 @@ export default function MainContent(props) {
       />
 
       <section className="season-pagination">
-        <div onClick={(event) => handleSeasonNavClick(previousSeason, event)} className="season-pagination-button season-pagination-previous">&lt; Season {previousSeason}</div>
-        <div onClick={(event) => handleSeasonNavClick(nextSeason, event)} className="season-pagination-button season-pagination-next">Season {nextSeason} &gt;</div>
+        {seasonInfo.seasonNumber > 1 && <div onClick={(event) => handleSeasonNavClick(previousSeason, event)} className="season-pagination-button season-pagination-previous">&lt; Season {previousSeason}</div>}
+        {seasonInfo.seasonNumber < 49 && <div onClick={(event) => handleSeasonNavClick(nextSeason, event)} className="season-pagination-button season-pagination-next">Season {nextSeason} &gt;</div>}
       </section>
 
       {/* Players Grid */}
