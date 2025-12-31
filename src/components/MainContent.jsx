@@ -1,12 +1,15 @@
 import React from "react"
-import { playersData, episodeData } from "../../assets/data/season_16.js"
+import { playersData } from "../../assets/data/season_16.js"
 import { seasonData } from "../../assets/data/survivor_seasons.js"
+import { episodeData } from "../../assets/data/survivor_episodes.js"
 import SeasonInformation from "./SeasonInformation"
 import PlayerTeaser from "./PlayerTeaser"
 import EpisodeTableEntry from "./EpisodeTableEntry"
 
 export default function MainContent(props) {
   const [seasonInfo, setSeasonInfo] = React.useState(seasonData[props.seasonNumber])
+  const [episodeInfo, setEpisodeInfo] = React.useState(episodeData[props.seasonNumber])
+  console.log(episodeInfo)
   const nextSeason = seasonInfo.seasonNumber + 1
   const previousSeason = seasonInfo.seasonNumber - 1
 
@@ -18,7 +21,7 @@ export default function MainContent(props) {
     )
   })
 
-  const episodeTableEntries = episodeData.map((episode) => {
+  const episodeTableEntries = episodeInfo.map((episode) => {
     return (
       <EpisodeTableEntry
         {...episode}
@@ -28,6 +31,7 @@ export default function MainContent(props) {
 
   function handleSeasonNavClick(seasonNumber, event) {
     setSeasonInfo(seasonData[seasonNumber])
+    setEpisodeInfo(episodeData[seasonNumber])
   }
 
   return (
@@ -42,14 +46,6 @@ export default function MainContent(props) {
         <div className="pagination-btn-container">{seasonInfo.seasonNumber < 49 && <button onClick={(event) => handleSeasonNavClick(nextSeason, event)} className="season-pagination-button season-pagination-next">Season {nextSeason} &gt;</button>}</div>
       </section>
 
-      {/* Players Grid */}
-      <section className="players-section">
-        <h2>Castaways</h2>
-        <div className="players-grid">
-          {players}         
-        </div>
-      </section>
-
       {/* Episode Table */}
       <section className='episodes-section'>
         <h2>Episodes</h2>
@@ -60,6 +56,14 @@ export default function MainContent(props) {
             <p>Boots</p>
           </div>
           {episodeTableEntries}
+        </div>
+      </section>
+
+      {/* Players Grid */}
+      <section className="players-section">
+        <h2>Castaways</h2>
+        <div className="players-grid">
+          {players}
         </div>
       </section>
 
