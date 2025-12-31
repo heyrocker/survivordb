@@ -37,8 +37,9 @@ export default function MainContent(props) {
       />
 
       <section className="season-pagination">
-        {seasonInfo.seasonNumber > 1 && <div onClick={(event) => handleSeasonNavClick(previousSeason, event)} className="season-pagination-button season-pagination-previous">&lt; Season {previousSeason}</div>}
-        {seasonInfo.seasonNumber < 49 && <div onClick={(event) => handleSeasonNavClick(nextSeason, event)} className="season-pagination-button season-pagination-next">Season {nextSeason} &gt;</div>}
+
+        <div className="pagination-btn-container">{seasonInfo.seasonNumber > 1 && <button onClick={(event) => handleSeasonNavClick(previousSeason, event)} className="season-pagination-button season-pagination-previous">&lt; Season {previousSeason}</button>}</div>
+        <div className="pagination-btn-container">{seasonInfo.seasonNumber < 49 && <button onClick={(event) => handleSeasonNavClick(nextSeason, event)} className="season-pagination-button season-pagination-next">Season {nextSeason} &gt;</button>}</div>
       </section>
 
       {/* Players Grid */}
