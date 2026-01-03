@@ -29,7 +29,7 @@ export default function SeasonInformation(props) {
           </div>
 
           <div className="season-title">
-            <h1>{props.title}</h1>
+            <h1>{props.seasonName}</h1>
           </div>
       </section>
 
@@ -37,9 +37,9 @@ export default function SeasonInformation(props) {
         <p><span className="information-title">Location:</span> {props.location} </p>
         <p><span className="information-title">Filming Dates:</span> {filmingStartDate} - {filmingEndDate}</p>
         <p><span className="information-title">Air Dates:</span> {airingStartDate} - {airingEndDate}</p>
-        <p><span className="information-title">Castaways:</span> {props.castaways}</p>
+        <p><span className="information-title">Castaways:</span> {props.numberOfCastaways}</p>
         <p><span className="information-title">Days:</span> {props.days}</p>
-        <p><span className="information-title">Episodes:</span> {props.episodes}</p>
+        <p><span className="information-title">Episodes:</span> {props.numberOfEpisodes}</p>
       </section>
     </>
   )
