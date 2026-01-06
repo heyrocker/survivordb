@@ -9,7 +9,7 @@ export default function EpisodeTableEntry(props) {
         <small>{props.episodeSummary}</small>
       </p>
       <p>{airDate}</p>
-      <p>{props.episodeBoot}</p>
+      <p>{props.episodeBoots.join(', ')}</p>
     </div>
   )
 }

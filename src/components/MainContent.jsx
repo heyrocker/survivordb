@@ -30,12 +30,16 @@ export default function MainContent(props) {
       numberOfCastaways
       episodesCollection {
       	items {
+          sys {
+            id
+          }
           episodeName
           episodeNumber
           summary {
             json
           }
           airDate
+          boots
         }
       }
     }
@@ -65,7 +69,9 @@ export default function MainContent(props) {
       return {
         episodeTitle: episode.episodeName,
         episodeAirDate: episode.airDate,
-        episodeSummary: episode.summary.json.content[0].content[0].value
+        episodeSummary: episode.summary.json.content[0].content[0].value,
+        episodeBoots: episode.boots,
+        episodeId: episode.sys.id
       }
     })
     setEpisodeInfo(newEpisodeArray)
@@ -81,7 +87,7 @@ export default function MainContent(props) {
 
   const episodeTableEntries = episodeInfo.map((episode) => {
     return (
-      <EpisodeTableEntry
+      <EpisodeTableEntry key={episode.episodeId} id={episode.episodeId}
         {...episode}
       />
     )
