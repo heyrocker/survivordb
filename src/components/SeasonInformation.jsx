@@ -34,12 +34,12 @@ export default function SeasonInformation(props) {
       </section>
 
       <section className="season-information-section">
-        <p><span className="information-title">Location:</span> {props.location} </p>
-        <p><span className="information-title">Filming Dates:</span> {filmingStartDate} - {filmingEndDate}</p>
-        <p><span className="information-title">Air Dates:</span> {airingStartDate} - {airingEndDate}</p>
-        <p><span className="information-title">Castaways:</span> {props.numberOfCastaways}</p>
-        <p><span className="information-title">Days:</span> {props.days}</p>
-        <p><span className="information-title">Episodes:</span> {props.numberOfEpisodes}</p>
+        <p><span className="information-title"><strong>Location:</strong></span> {props.location} </p>
+        <p><span className="information-title"><strong>Filming Dates:</strong></span> {filmingStartDate} - {filmingEndDate}</p>
+        <p><span className="information-title"><strong>Air Dates:</strong></span> {airingStartDate} - {airingEndDate}</p>
+        <p><span className="information-title"><strong>Castaways:</strong></span> {props.numberOfCastaways}</p>
+        <p><span className="information-title"><strong>Days:</strong></span> {props.days}</p>
+        <p><span className="information-title"><strong>Episodes:</strong></span> {props.numberOfEpisodes}</p>
       </section>
     </>
   )
