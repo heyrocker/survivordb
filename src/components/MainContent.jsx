@@ -1,6 +1,5 @@
 import React from "react"
 import { playersData } from "../../assets/data/season_16.js"
-import { episodeData } from "../../assets/data/survivor_episodes.js"
 import SeasonInformation from "./SeasonInformation"
 import PlayerTeaser from "./PlayerTeaser"
 import EpisodeTableEntry from "./EpisodeTableEntry"
@@ -8,9 +7,8 @@ import EpisodeTableEntry from "./EpisodeTableEntry"
 export default function MainContent(props) {
   const [seasonNumber, setSeasonNumber] = React.useState(props.seasonNumber)
   const [seasonInfo, setSeasonInfo] = React.useState({})
+  const [episodeInfo, setEpisodeInfo] = React.useState([])
 
-  // const [episodeInfo, setEpisodeInfo] = React.useState(episodeData[props.seasonNumber])
-  // console.log(episodeInfo)
   const nextSeason = seasonNumber + 1
   const previousSeason = seasonNumber - 1
   const graphqlEndpoint = "https://graphql.contentful.com/content/v1/spaces/"
@@ -18,20 +16,30 @@ export default function MainContent(props) {
   const contentful_access_key = import.meta.env.VITE_CONTENTFUL_ACCESS_KEY
   const query = 
   `{
-      survivorSeasonCollection(where: { seasonNumber: ${seasonNumber} }, limit: 1, preview: true) {
+  survivorSeasonCollection(where: { seasonNumber: ${seasonNumber} }, limit: 1, preview: true) {
     items {
-          seasonNumber
-          seasonName
-          location
-          filmingStartDate
-          filmingEndDate
-          airingStartDate
-          airingEndDate
-          days
-          numberOfEpisodes
-          numberOfCastaways
+      seasonNumber
+      seasonName
+      location
+      filmingStartDate
+      filmingEndDate
+      airingStartDate
+      airingEndDate
+      days
+      numberOfEpisodes
+      numberOfCastaways
+      episodesCollection {
+      	items {
+          episodeName
+          episodeNumber
+          summary {
+            json
+          }
+          airDate
         }
       }
+    }
+  }
   }`
 
   React.useEffect(() => {
@@ -46,10 +54,23 @@ export default function MainContent(props) {
       body: JSON.stringify({ query }),
     })
       .then(response => response.json())
-      .then(data => setSeasonInfo(data.data.survivorSeasonCollection.items[0]))
+      .then(data => processSeasonData(data))
     }, [seasonNumber]
   ) 
 
+  function processSeasonData(data) {
+    setSeasonInfo(data.data.survivorSeasonCollection.items[0])
+    let originalEpisodeArray = data.data.survivorSeasonCollection.items[0].episodesCollection.items
+    const newEpisodeArray = originalEpisodeArray.map((episode) => {
+      return {
+        episodeTitle: episode.episodeName,
+        episodeAirDate: episode.airDate,
+        episodeSummary: episode.summary.json.content[0].content[0].value
+      }
+    })
+    setEpisodeInfo(newEpisodeArray)
+  }
+    
   // const players = playersData.map((player) => {
   //   return (
   //     <PlayerTeaser 
@@ -58,13 +79,13 @@ export default function MainContent(props) {
   //   )
   // })
 
-  // const episodeTableEntries = episodeInfo.map((episode) => {
-  //   return (
-  //     <EpisodeTableEntry
-  //       {...episode}
-  //     />
-  //   )
-  // })
+  const episodeTableEntries = episodeInfo.map((episode) => {
+    return (
+      <EpisodeTableEntry
+        {...episode}
+      />
+    )
+  })
 
   function handleSeasonNavClick(seasonNumber, event) {
     setSeasonNumber(seasonNumber)
@@ -82,7 +103,7 @@ export default function MainContent(props) {
       </section>
 
       {/* Episode Table */}
-      {/* <section className='episodes-section'>
+      <section className='episodes-section'>
         <h2>Episodes</h2>
         <div className='episodes-list'>
           <div className='episode-row episode-header'>
@@ -92,7 +113,7 @@ export default function MainContent(props) {
           </div>
           {episodeTableEntries}
         </div>
-      </section> */}
+      </section>
 
       {/* Players Grid */}
       {/* <section className="players-section">
