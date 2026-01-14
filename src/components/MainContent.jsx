@@ -1,49 +1,59 @@
 import React from "react"
-import { playersData } from "../../assets/data/season_16.js"
 import SeasonInformation from "./SeasonInformation"
 import PlayerTeaser from "./PlayerTeaser"
-import EpisodeTableEntry from "./EpisodeTableEntry"
+import EpisodeTable from "./EpisodeTable"
 
 export default function MainContent(props) {
   const [seasonNumber, setSeasonNumber] = React.useState(props.seasonNumber)
   const [seasonInfo, setSeasonInfo] = React.useState({})
-  const [episodeInfo, setEpisodeInfo] = React.useState([])
-
+  
   const nextSeason = seasonNumber + 1
   const previousSeason = seasonNumber - 1
   const graphqlEndpoint = "https://graphql.contentful.com/content/v1/spaces/"
   const space_id = "a7mk5u5e53e2"
   const contentful_access_key = import.meta.env.VITE_CONTENTFUL_ACCESS_KEY
   const query = 
-  `{
-  survivorSeasonCollection(where: { seasonNumber: ${seasonNumber} }, limit: 1, preview: true) {
-    items {
-      seasonNumber
-      seasonName
-      location
-      filmingStartDate
-      filmingEndDate
-      airingStartDate
-      airingEndDate
-      days
-      numberOfEpisodes
-      numberOfCastaways
-      episodesCollection {
-      	items {
-          sys {
-            id
+  `query {
+    survivorSeasonCollection(where: { seasonNumber: ${seasonNumber} }, limit: 1, preview: true) {
+      items {
+        seasonNumber
+        seasonName
+        location
+        filmingStartDate
+        filmingEndDate
+        airingStartDate
+        airingEndDate
+        days
+        numberOfEpisodes
+        numberOfCastaways
+        episodesCollection {
+          items {
+            sys {
+              id
+            }
+            episodeName
+            episodeNumber
+            summary {
+              json
+            }
+            airDate
+            boots
           }
-          episodeName
-          episodeNumber
-          summary {
-            json
+        }
+        linkedFrom {
+          appearancesCollection(order:finishPosition_ASC) {
+            items {
+              finishPosition
+              bootMethod
+              player {
+                name
+                nickname
+              }
+            }
           }
-          airDate
-          boots
         }
       }
     }
-  }
   }`
 
   React.useEffect(() => {
@@ -58,24 +68,9 @@ export default function MainContent(props) {
       body: JSON.stringify({ query }),
     })
       .then(response => response.json())
-      .then(data => processSeasonData(data))
+      .then(data => setSeasonInfo(data.data.survivorSeasonCollection.items[0]))
     }, [seasonNumber]
   ) 
-
-  function processSeasonData(data) {
-    setSeasonInfo(data.data.survivorSeasonCollection.items[0])
-    let originalEpisodeArray = data.data.survivorSeasonCollection.items[0].episodesCollection.items
-    const newEpisodeArray = originalEpisodeArray.map((episode) => {
-      return {
-        episodeTitle: episode.episodeName,
-        episodeAirDate: episode.airDate,
-        episodeSummary: episode.summary.json.content[0].content[0].value,
-        episodeBoots: episode.boots,
-        episodeId: episode.sys.id
-      }
-    })
-    setEpisodeInfo(newEpisodeArray)
-  }
     
   // const players = playersData.map((player) => {
   //   return (
@@ -85,22 +80,20 @@ export default function MainContent(props) {
   //   )
   // })
 
-  const episodeTableEntries = episodeInfo.map((episode) => {
-    return (
-      <EpisodeTableEntry key={episode.episodeId} id={episode.episodeId}
-        {...episode}
-      />
-    )
-  })
 
   function handleSeasonNavClick(seasonNumber, event) {
     setSeasonNumber(seasonNumber)
   }
 
+  // If this is the first render before the data has been fetched, just bail.
+  if (Object.keys(seasonInfo).length === 0) {
+    return null
+  }
+
   return (
     <main>
       <SeasonInformation 
-        {...seasonInfo}
+        seasonInfo={seasonInfo}
       />
 
       <section className="season-pagination">
@@ -109,17 +102,7 @@ export default function MainContent(props) {
       </section>
 
       {/* Episode Table */}
-      <section className='episodes-section'>
-        <h2>Episodes</h2>
-        <div className='episodes-list'>
-          <div className='episode-row episode-header'>
-            <p>Episode Name</p>
-            <p>Air Date</p>
-            <p>Boots</p>
-          </div>
-          {episodeTableEntries}
-        </div>
-      </section>
+      <EpisodeTable episodeInfo={seasonInfo.episodesCollection.items} />
 
       {/* Players Grid */}
       {/* <section className="players-section">
