@@ -1,0 +1,2069 @@
+{
+  "contentTypes": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "a7mk5u5e53e2"
+          }
+        },
+        "id": "survivorSeason",
+        "type": "ContentType",
+        "createdAt": "2025-12-17T22:51:20.163Z",
+        "updatedAt": "2026-01-06T01:26:19.309Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 35,
+        "publishedAt": "2026-01-06T01:26:19.309Z",
+        "firstPublishedAt": "2025-12-17T22:51:20.645Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1fEqK9biZ5w8f4rodzK6TC"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1fEqK9biZ5w8f4rodzK6TC"
+          }
+        },
+        "publishedCounter": 18,
+        "version": 36,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1fEqK9biZ5w8f4rodzK6TC"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/a7mk5u5e53e2/environments/master/content_types/survivorSeason"
+      },
+      "displayField": "seasonName",
+      "name": "Survivor season",
+      "description": "A content type that represents a season of Survivor. It should include at minimum",
+      "fields": [
+        {
+          "id": "seasonNumber",
+          "name": "Season number",
+          "type": "Number",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "seasonName",
+          "name": "Season Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "logo",
+          "name": "Logo",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "location",
+          "name": "Location",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "filmingStartDate",
+          "name": "Filming Start Date",
+          "type": "Date",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "filmingEndDate",
+          "name": "Filming End Date",
+          "type": "Date",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "airingStartDate",
+          "name": "Airing Start Date",
+          "type": "Date",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "airingEndDate",
+          "name": "Airing End Date",
+          "type": "Date",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "days",
+          "name": "Days",
+          "type": "Integer",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "range": {
+                "min": null,
+                "max": 39
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "numberOfCastaways",
+          "name": "Number of castaways",
+          "type": "Integer",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "numberOfEpisodes",
+          "name": "Number of Episodes",
+          "type": "Integer",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "episodes",
+          "name": "episodes",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "episode"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "a7mk5u5e53e2"
+          }
+        },
+        "id": "survivorPlayer",
+        "type": "ContentType",
+        "createdAt": "2025-12-17T23:06:13.916Z",
+        "updatedAt": "2025-12-17T23:09:57.605Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2025-12-17T23:09:57.605Z",
+        "firstPublishedAt": "2025-12-17T23:06:14.257Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1fEqK9biZ5w8f4rodzK6TC"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1fEqK9biZ5w8f4rodzK6TC"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1fEqK9biZ5w8f4rodzK6TC"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/a7mk5u5e53e2/environments/master/content_types/survivorPlayer"
+      },
+      "displayField": "name",
+      "name": "Survivor Player",
+      "description": "Generate a content type that represents a player on a season of Survivor.",
+      "fields": [
+        {
+          "id": "name",
+          "name": "Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "photo",
+          "name": "Photo",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "birthday",
+          "name": "Birthday",
+          "type": "Date",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "a7mk5u5e53e2"
+          }
+        },
+        "id": "episode",
+        "type": "ContentType",
+        "createdAt": "2025-12-17T23:52:35.640Z",
+        "updatedAt": "2026-01-06T16:11:01.647Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 9,
+        "publishedAt": "2026-01-06T16:11:01.647Z",
+        "firstPublishedAt": "2025-12-17T23:52:35.951Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1fEqK9biZ5w8f4rodzK6TC"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1fEqK9biZ5w8f4rodzK6TC"
+          }
+        },
+        "publishedCounter": 5,
+        "version": 10,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1fEqK9biZ5w8f4rodzK6TC"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/a7mk5u5e53e2/environments/master/content_types/episode"
+      },
+      "displayField": "episodeName",
+      "name": "Episode",
+      "description": "An episode of the TV show Survivor",
+      "fields": [
+        {
+          "id": "episodeName",
+          "name": "Episode Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "episodeNumber",
+          "name": "EpisodeNumber",
+          "type": "Number",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "summary",
+          "name": "Summary",
+          "type": "RichText",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "enabledMarks": [
+                "bold",
+                "italic",
+                "underline",
+                "code",
+                "superscript",
+                "subscript",
+                "strikethrough"
+              ],
+              "message": "Only bold, italic, underline, code, superscript, subscript, and strikethrough marks are allowed"
+            },
+            {
+              "enabledNodeTypes": [
+                "heading-1",
+                "heading-2",
+                "heading-3",
+                "heading-4",
+                "heading-5",
+                "heading-6",
+                "ordered-list",
+                "unordered-list",
+                "hr",
+                "blockquote",
+                "embedded-entry-block",
+                "embedded-asset-block",
+                "table",
+                "asset-hyperlink",
+                "embedded-entry-inline",
+                "entry-hyperlink",
+                "hyperlink"
+              ],
+              "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, Unordered list, horizontal rule, quote, block entry, asset, table, link to asset, inline entry, link to entry, and link to Url nodes are allowed"
+            },
+            {
+              "nodes": {
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "airDate",
+          "name": "Air Date",
+          "type": "Date",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "boots",
+          "name": "Boots",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Symbol",
+            "validations": [
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "tags": [
+  ],
+  "editorInterfaces": [
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "a7mk5u5e53e2",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 35,
+        "createdAt": "2025-12-17T22:51:20.834Z",
+        "createdBy": {
+          "sys": {
+            "id": "1fEqK9biZ5w8f4rodzK6TC",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2026-01-06T01:26:19.985Z",
+        "updatedBy": {
+          "sys": {
+            "id": "1fEqK9biZ5w8f4rodzK6TC",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "survivorSeason",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "seasonNumber",
+          "settings": {
+            "helpText": "This is some help text"
+          },
+          "widgetId": "numberEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "seasonName",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "logo",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "location",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "filmingStartDate",
+          "settings": {
+            "ampm": "24",
+            "format": "dateonly"
+          },
+          "widgetId": "datePicker",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "filmingEndDate",
+          "settings": {
+            "ampm": "24",
+            "format": "dateonly"
+          },
+          "widgetId": "datePicker",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "airingStartDate",
+          "settings": {
+            "ampm": "24",
+            "format": "dateonly"
+          },
+          "widgetId": "datePicker",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "airingEndDate",
+          "settings": {
+            "ampm": "24",
+            "format": "dateonly"
+          },
+          "widgetId": "datePicker",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "days",
+          "widgetId": "numberEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "numberOfCastaways",
+          "widgetId": "numberEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "numberOfEpisodes",
+          "widgetId": "numberEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "episodes",
+          "settings": {
+            "bulkEditing": true,
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "a7mk5u5e53e2",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 6,
+        "createdAt": "2025-12-17T23:06:14.380Z",
+        "createdBy": {
+          "sys": {
+            "id": "1fEqK9biZ5w8f4rodzK6TC",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2025-12-17T23:09:58.219Z",
+        "updatedBy": {
+          "sys": {
+            "id": "1fEqK9biZ5w8f4rodzK6TC",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "survivorPlayer",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "name",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "photo",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "birthday",
+          "settings": {
+            "ampm": "24",
+            "format": "dateonly"
+          },
+          "widgetId": "datePicker",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "a7mk5u5e53e2",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 9,
+        "createdAt": "2025-12-17T23:52:36.120Z",
+        "createdBy": {
+          "sys": {
+            "id": "1fEqK9biZ5w8f4rodzK6TC",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2026-01-06T16:11:02.987Z",
+        "updatedBy": {
+          "sys": {
+            "id": "1fEqK9biZ5w8f4rodzK6TC",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "episode",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "episodeName",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "episodeNumber",
+          "widgetId": "numberEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "summary",
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "airDate",
+          "widgetId": "datePicker",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "boots",
+          "widgetId": "tagEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "a7mk5u5e53e2"
+          }
+        },
+        "id": "survivor-season-35",
+        "type": "Entry",
+        "createdAt": "2026-01-03T02:02:06.591Z",
+        "updatedAt": "2026-01-06T16:12:41.866Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2026-01-06T05:03:37.739Z",
+        "firstPublishedAt": "2026-01-06T05:03:37.739Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1fEqK9biZ5w8f4rodzK6TC"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1fEqK9biZ5w8f4rodzK6TC"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1fEqK9biZ5w8f4rodzK6TC"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "de-DE": "published",
+            "en-US": "changed"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "survivorSeason"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/a7mk5u5e53e2/environments/master/entries/survivor-season-35"
+      },
+      "fields": {
+        "seasonNumber": {
+          "en-US": 35
+        },
+        "seasonName": {
+          "en-US": "Survivor: Heroes vs. Healers vs. Hustlers"
+        },
+        "location": {
+          "en-US": "Mamanuca Islands, Fiji"
+        },
+        "filmingStartDate": {
+          "en-US": "2017-03-23"
+        },
+        "filmingEndDate": {
+          "en-US": "2017-04-30"
+        },
+        "airingStartDate": {
+          "en-US": "2017-09-27"
+        },
+        "airingEndDate": {
+          "en-US": "2017-12-20"
+        },
+        "days": {
+          "en-US": 39
+        },
+        "numberOfCastaways": {
+          "en-US": 18
+        },
+        "numberOfEpisodes": {
+          "en-US": 14
+        }
+      }
+    }
+  ],
+  "assets": [
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "a7mk5u5e53e2"
+          }
+        },
+        "id": "6jFGYaFqh9MqROH3aeUctH",
+        "type": "Asset",
+        "createdAt": "2024-06-19T17:56:57.172Z",
+        "updatedAt": "2024-06-19T17:57:00.679Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-06-19T17:57:00.679Z",
+        "firstPublishedAt": "2024-06-19T17:57:00.679Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1fEqK9biZ5w8f4rodzK6TC"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1fEqK9biZ5w8f4rodzK6TC"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1fEqK9biZ5w8f4rodzK6TC"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/a7mk5u5e53e2/environments/master/assets/6jFGYaFqh9MqROH3aeUctH"
+      },
+      "fields": {
+        "title": {
+          "de-DE": "Person, die ein schwarzes Kleid trägt und seitlich der Kamera zugewandt ist und ihr Bein herausstreckt",
+          "en-US": "Person wearing black dress facing the camera sideways, sticking out her leg"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/a7mk5u5e53e2/6jFGYaFqh9MqROH3aeUctH/000927f57a509e4303bc5dfe53d8cb1d/khaled-ghareeb-OjMiS43gEPo-unsplash__1_.jpg",
+            "details": {
+              "size": 227744,
+              "image": {
+                "width": 2575,
+                "height": 2039
+              }
+            },
+            "fileName": "khaled-ghareeb-OjMiS43gEPo-unsplash (1).jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "a7mk5u5e53e2"
+          }
+        },
+        "id": "1HALj6mEj6PwiHeM5f2xbU",
+        "type": "Asset",
+        "createdAt": "2024-06-19T17:56:57.217Z",
+        "updatedAt": "2024-06-19T17:57:01.703Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-06-19T17:57:01.703Z",
+        "firstPublishedAt": "2024-06-19T17:57:01.703Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1fEqK9biZ5w8f4rodzK6TC"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1fEqK9biZ5w8f4rodzK6TC"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1fEqK9biZ5w8f4rodzK6TC"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/a7mk5u5e53e2/environments/master/assets/1HALj6mEj6PwiHeM5f2xbU"
+      },
+      "fields": {
+        "title": {
+          "de-DE": "Person, die ein schwarzes Kleid trägt",
+          "en-US": "Person wearing black dress"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/a7mk5u5e53e2/1HALj6mEj6PwiHeM5f2xbU/5583bf7592176e015697b5b5db125f38/IMAGE.jpg",
+            "details": {
+              "size": 99083,
+              "image": {
+                "width": 960,
+                "height": 1200
+              }
+            },
+            "fileName": "IMAGE.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "a7mk5u5e53e2"
+          }
+        },
+        "id": "43bDOK93jQL0DFcwg1Onks",
+        "type": "Asset",
+        "createdAt": "2024-06-19T17:56:57.681Z",
+        "updatedAt": "2024-06-19T17:57:02.720Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-06-19T17:57:02.720Z",
+        "firstPublishedAt": "2024-06-19T17:57:02.720Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1fEqK9biZ5w8f4rodzK6TC"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1fEqK9biZ5w8f4rodzK6TC"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1fEqK9biZ5w8f4rodzK6TC"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/a7mk5u5e53e2/environments/master/assets/43bDOK93jQL0DFcwg1Onks"
+      },
+      "fields": {
+        "title": {
+          "en-US": "A person wearing a green jumpsuit"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/a7mk5u5e53e2/43bDOK93jQL0DFcwg1Onks/c449865928eec166930c4b2daa489fb3/IMAGE.jpg",
+            "details": {
+              "size": 48896,
+              "image": {
+                "width": 960,
+                "height": 1200
+              }
+            },
+            "fileName": "IMAGE.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "a7mk5u5e53e2"
+          }
+        },
+        "id": "Qkh3n2KPwqimeqNTJYqWv",
+        "type": "Asset",
+        "createdAt": "2024-06-19T17:56:57.690Z",
+        "updatedAt": "2024-06-19T17:57:01.712Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-06-19T17:57:01.712Z",
+        "firstPublishedAt": "2024-06-19T17:57:01.712Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1fEqK9biZ5w8f4rodzK6TC"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1fEqK9biZ5w8f4rodzK6TC"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1fEqK9biZ5w8f4rodzK6TC"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/a7mk5u5e53e2/environments/master/assets/Qkh3n2KPwqimeqNTJYqWv"
+      },
+      "fields": {
+        "title": {
+          "en-US": "A person wearing a blue dress"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/a7mk5u5e53e2/Qkh3n2KPwqimeqNTJYqWv/d89803a0d61451f55ed8a7e3765f769c/IMAGE.jpg",
+            "details": {
+              "size": 64417,
+              "image": {
+                "width": 960,
+                "height": 1200
+              }
+            },
+            "fileName": "IMAGE.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "a7mk5u5e53e2"
+          }
+        },
+        "id": "6PkraSxWWd96AU6FTYVssd",
+        "type": "Asset",
+        "createdAt": "2024-06-19T17:56:57.696Z",
+        "updatedAt": "2024-06-19T17:57:00.694Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-06-19T17:57:00.694Z",
+        "firstPublishedAt": "2024-06-19T17:57:00.694Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1fEqK9biZ5w8f4rodzK6TC"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1fEqK9biZ5w8f4rodzK6TC"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1fEqK9biZ5w8f4rodzK6TC"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/a7mk5u5e53e2/environments/master/assets/6PkraSxWWd96AU6FTYVssd"
+      },
+      "fields": {
+        "title": {
+          "de-DE": "Eine Person im schwarzen Kleid",
+          "en-US": "A person in black dress"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/a7mk5u5e53e2/6PkraSxWWd96AU6FTYVssd/41db1304c29304f96a7be3e4d8d82cc7/khaled-ghareeb-qCCaBQ8b6lM-unsplash.jpg",
+            "details": {
+              "size": 1535349,
+              "image": {
+                "width": 5228,
+                "height": 3601
+              }
+            },
+            "fileName": "khaled-ghareeb-qCCaBQ8b6lM-unsplash.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "a7mk5u5e53e2"
+          }
+        },
+        "id": "kX2fKuX9ho0Bq3O8EklRu",
+        "type": "Asset",
+        "createdAt": "2024-06-19T17:56:57.701Z",
+        "updatedAt": "2024-06-19T17:57:02.733Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-06-19T17:57:02.733Z",
+        "firstPublishedAt": "2024-06-19T17:57:02.733Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1fEqK9biZ5w8f4rodzK6TC"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1fEqK9biZ5w8f4rodzK6TC"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1fEqK9biZ5w8f4rodzK6TC"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/a7mk5u5e53e2/environments/master/assets/kX2fKuX9ho0Bq3O8EklRu"
+      },
+      "fields": {
+        "title": {
+          "en-US": "A person wearing a grey dress with some square designs"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/a7mk5u5e53e2/kX2fKuX9ho0Bq3O8EklRu/320cb2877734b8a4a5322106a114dfbb/IMAGE__1_.jpg",
+            "details": {
+              "size": 74369,
+              "image": {
+                "width": 968,
+                "height": 1208
+              }
+            },
+            "fileName": "IMAGE (1).jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "a7mk5u5e53e2"
+          }
+        },
+        "id": "28AfvJeVgRhyJf7Q1P27xt",
+        "type": "Asset",
+        "createdAt": "2024-06-19T17:56:57.702Z",
+        "updatedAt": "2024-06-19T17:57:02.731Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-06-19T17:57:02.731Z",
+        "firstPublishedAt": "2024-06-19T17:57:02.731Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1fEqK9biZ5w8f4rodzK6TC"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1fEqK9biZ5w8f4rodzK6TC"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1fEqK9biZ5w8f4rodzK6TC"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/a7mk5u5e53e2/environments/master/assets/28AfvJeVgRhyJf7Q1P27xt"
+      },
+      "fields": {
+        "title": {
+          "en-US": "A person wearing a grey dress with some square designs"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/a7mk5u5e53e2/28AfvJeVgRhyJf7Q1P27xt/319220d710bc929741f0a5205158e289/khaled-ghareeb-upepKTbwm3A-unsplash__1_.jpg",
+            "details": {
+              "size": 517110,
+              "image": {
+                "width": 3779,
+                "height": 5525
+              }
+            },
+            "fileName": "khaled-ghareeb-upepKTbwm3A-unsplash (1).jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "a7mk5u5e53e2"
+          }
+        },
+        "id": "6HTUtMvMrQO9RM38xIzgtE",
+        "type": "Asset",
+        "createdAt": "2024-06-19T17:56:57.753Z",
+        "updatedAt": "2024-06-19T17:57:02.714Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-06-19T17:57:02.714Z",
+        "firstPublishedAt": "2024-06-19T17:57:02.714Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1fEqK9biZ5w8f4rodzK6TC"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1fEqK9biZ5w8f4rodzK6TC"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1fEqK9biZ5w8f4rodzK6TC"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/a7mk5u5e53e2/environments/master/assets/6HTUtMvMrQO9RM38xIzgtE"
+      },
+      "fields": {
+        "title": {
+          "de-DE": "Person im roten Kleid an einem Strand",
+          "en-US": "Person in red dress on a beach"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/a7mk5u5e53e2/6HTUtMvMrQO9RM38xIzgtE/1703c0a375fe219c16ba51d2fd28692b/IMAGE__1_.jpg",
+            "details": {
+              "size": 87760,
+              "image": {
+                "width": 960,
+                "height": 1200
+              }
+            },
+            "fileName": "IMAGE (1).jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "a7mk5u5e53e2"
+          }
+        },
+        "id": "4vOh4wga0gcGIeW9xjDQ0X",
+        "type": "Asset",
+        "createdAt": "2024-06-19T17:56:58.722Z",
+        "updatedAt": "2024-06-19T17:57:02.978Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-06-19T17:57:02.978Z",
+        "firstPublishedAt": "2024-06-19T17:57:02.978Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1fEqK9biZ5w8f4rodzK6TC"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1fEqK9biZ5w8f4rodzK6TC"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1fEqK9biZ5w8f4rodzK6TC"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/a7mk5u5e53e2/environments/master/assets/4vOh4wga0gcGIeW9xjDQ0X"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Social media share image"
+        },
+        "description": {
+          "de-DE": "Person, die ein schwarzes Kleid trägt, verschränkt die Arme und blickt in die Kamera",
+          "en-US": "Person wearing a black dress, cross their arms, facing the camera"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/a7mk5u5e53e2/4vOh4wga0gcGIeW9xjDQ0X/f6da7ee8ab2333e7412756d05bfa7e41/khaled-ghareeb-qCCaBQ8b6lM-unsplash__1_.jpg",
+            "details": {
+              "size": 649884,
+              "image": {
+                "width": 5228,
+                "height": 3601
+              }
+            },
+            "fileName": "khaled-ghareeb-qCCaBQ8b6lM-unsplash (1).jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "a7mk5u5e53e2"
+          }
+        },
+        "id": "2j87g8YmvFSYmTrP3OXggp",
+        "type": "Asset",
+        "createdAt": "2024-06-19T17:56:58.723Z",
+        "updatedAt": "2024-06-19T17:57:02.969Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-06-19T17:57:02.969Z",
+        "firstPublishedAt": "2024-06-19T17:57:02.969Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1fEqK9biZ5w8f4rodzK6TC"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1fEqK9biZ5w8f4rodzK6TC"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1fEqK9biZ5w8f4rodzK6TC"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/a7mk5u5e53e2/environments/master/assets/2j87g8YmvFSYmTrP3OXggp"
+      },
+      "fields": {
+        "title": {
+          "en-US": "A person wearing a maroon coloured flowing dress"
+        },
+        "description": {
+          "de-DE": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris",
+          "en-US": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/a7mk5u5e53e2/2j87g8YmvFSYmTrP3OXggp/e9c0d272400f63552e0c9976d35a755b/IMAGE.jpg",
+            "details": {
+              "size": 98934,
+              "image": {
+                "width": 960,
+                "height": 1200
+              }
+            },
+            "fileName": "IMAGE.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    }
+  ],
+  "locales": [
+    {
+      "name": "German (Germany)",
+      "code": "de-DE",
+      "fallbackCode": "en-US",
+      "default": false,
+      "contentManagementApi": true,
+      "contentDeliveryApi": true,
+      "optional": false,
+      "sys": {
+        "type": "Locale",
+        "id": "1PZdrRj4uao5zvDswxAL7t",
+        "version": 1,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "a7mk5u5e53e2"
+          }
+        },
+        "environment": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Environment",
+            "id": "master",
+            "uuid": "1d51c557-d04d-4560-8242-aaeb748aa513"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1fEqK9biZ5w8f4rodzK6TC"
+          }
+        },
+        "createdAt": "2024-06-19T17:56:53Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1fEqK9biZ5w8f4rodzK6TC"
+          }
+        },
+        "updatedAt": "2024-06-19T17:56:53Z"
+      }
+    },
+    {
+      "name": "English (United States)",
+      "code": "en-US",
+      "fallbackCode": null,
+      "default": true,
+      "contentManagementApi": true,
+      "contentDeliveryApi": true,
+      "optional": false,
+      "sys": {
+        "type": "Locale",
+        "id": "1kH123mc2WukchPRr0aTQj",
+        "version": 1,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "a7mk5u5e53e2"
+          }
+        },
+        "environment": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Environment",
+            "id": "master",
+            "uuid": "1d51c557-d04d-4560-8242-aaeb748aa513"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1fEqK9biZ5w8f4rodzK6TC"
+          }
+        },
+        "createdAt": "2024-06-19T17:56:26Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1fEqK9biZ5w8f4rodzK6TC"
+          }
+        },
+        "updatedAt": "2024-06-19T17:56:26Z"
+      }
+    }
+  ],
+  "webhooks": [
+  ],
+  "roles": [
+    {
+      "name": "Author",
+      "description": "Allows editing of content",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": [
+            "create"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "read"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "update"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "create"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "read"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "update"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": [
+          "read"
+        ],
+        "Settings": [
+        ],
+        "ContentDelivery": [
+        ],
+        "Environments": [
+        ],
+        "EnvironmentAliases": [
+        ],
+        "Tags": [
+        ]
+      },
+      "sys": {
+        "type": "Role",
+        "id": "1l2mItXweaS6TmGbEW4XL9",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "a7mk5u5e53e2"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1fEqK9biZ5w8f4rodzK6TC"
+          }
+        },
+        "createdAt": "2024-06-19T17:56:26Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1fEqK9biZ5w8f4rodzK6TC"
+          }
+        },
+        "updatedAt": "2024-06-19T17:56:26Z"
+      }
+    },
+    {
+      "name": "Editor",
+      "description": "Allows editing, publishing and archiving of content",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": "all",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": "all",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": [
+          "read"
+        ],
+        "Settings": [
+        ],
+        "ContentDelivery": [
+        ],
+        "Environments": [
+        ],
+        "EnvironmentAliases": [
+        ],
+        "Tags": [
+        ]
+      },
+      "sys": {
+        "type": "Role",
+        "id": "1l2VhCx59pijFLMFSvTcMf",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "a7mk5u5e53e2"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1fEqK9biZ5w8f4rodzK6TC"
+          }
+        },
+        "createdAt": "2024-06-19T17:56:26Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1fEqK9biZ5w8f4rodzK6TC"
+          }
+        },
+        "updatedAt": "2024-06-19T17:56:26Z"
+      }
+    },
+    {
+      "name": "Translator",
+      "description": "Allows editing of localized fields in the specified language",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": [
+            "read"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "read"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "update"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              },
+              {
+                "paths": [
+                  {
+                    "doc": "fields.%.%"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "update"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              },
+              {
+                "paths": [
+                  {
+                    "doc": "fields.%.%"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": [
+          "read"
+        ],
+        "Settings": [
+        ],
+        "ContentDelivery": [
+        ],
+        "Environments": [
+        ],
+        "EnvironmentAliases": [
+        ],
+        "Tags": [
+        ]
+      },
+      "sys": {
+        "type": "Role",
+        "id": "1l3i7NAcg94ZfjGjDxtOIv",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "a7mk5u5e53e2"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1fEqK9biZ5w8f4rodzK6TC"
+          }
+        },
+        "createdAt": "2024-06-19T17:56:26Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1fEqK9biZ5w8f4rodzK6TC"
+          }
+        },
+        "updatedAt": "2024-06-19T17:56:26Z"
+      }
+    }
+  ]
+}
