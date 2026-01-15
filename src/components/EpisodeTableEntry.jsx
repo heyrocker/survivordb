@@ -3,7 +3,7 @@ export default function EpisodeTableEntry({episode}) {
   const airDate = new Date(episode.airDate).toLocaleDateString("en-US", options)
 
   return (
-    <div className='episode-row'>
+    <div className='episode-row list-row'>
       <p>
         <span className="episode-title">{episode.episodeName}</span>
         <small>{episode.summary.json.content[0].content[0].value}</small>

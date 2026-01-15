@@ -2,6 +2,7 @@ import React from "react"
 import SeasonInformation from "./SeasonInformation"
 import PlayerTeaser from "./PlayerTeaser"
 import EpisodeTable from "./EpisodeTable"
+import PlayersTable from "./PlayersTable"
 
 export default function MainContent(props) {
   const [seasonNumber, setSeasonNumber] = React.useState(props.seasonNumber)
@@ -46,6 +47,9 @@ export default function MainContent(props) {
               finishPosition
               bootMethod
               player {
+                sys {
+                  id
+                }
                 name
                 nickname
               }
@@ -71,15 +75,6 @@ export default function MainContent(props) {
       .then(data => setSeasonInfo(data.data.survivorSeasonCollection.items[0]))
     }, [seasonNumber]
   ) 
-    
-  // const players = playersData.map((player) => {
-  //   return (
-  //     <PlayerTeaser 
-  //       {...player}
-  //     />
-  //   )
-  // })
-
 
   function handleSeasonNavClick(seasonNumber, event) {
     setSeasonNumber(seasonNumber)
@@ -99,17 +94,11 @@ export default function MainContent(props) {
         <div className="pagination-btn-container">{seasonNumber < 49 && <button onClick={(event) => handleSeasonNavClick(nextSeason, event)} className="season-pagination-button season-pagination-next">Season {nextSeason} &gt;</button>}</div>
       </section>
 
+      {/* Players Grid */}
+      <PlayersTable playerInfo={seasonInfo.linkedFrom.appearancesCollection.items} />
+
       {/* Episode Table */}
       <EpisodeTable episodeInfo={seasonInfo.episodesCollection.items} />
-
-      {/* Players Grid */}
-      {/* <section className="players-section">
-        <h2>Castaways</h2>
-        <div className="players-grid">
-          {players}
-        </div>
-      </section> */}
-
     </main>
   )
 }

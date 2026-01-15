@@ -14,8 +14,8 @@ export default function EpisodeTable({ episodeInfo }) {
   return (
     <section className='episodes-section'>
       <h2>Episodes</h2>
-      <div className='episodes-list'>
-        <div className='episode-row episode-header'>
+      <div className='episodes-list list'>
+        <div className='episode-row episode-header list-row list-header'>
           <p>Episode Name</p>
           <p>Air Date</p>
           <p>Boots</p>
