@@ -1,23 +1,12 @@
 import EpisodeTableEntry from "./EpisodeTableEntry"
 
 export default function EpisodeTable({ episodeInfo }) {
-  console.log(episodeInfo)
-
-  const episodeObjects = episodeInfo.map((episode) => {
-    return {
-      episodeTitle: episode.episodeName,
-      episodeAirDate: episode.airDate,
-      episodeSummary: episode.summary.json.content[0].content[0].value,
-      episodeBoots: episode.boots,
-      episodeId: episode.sys.id
-    }
-  })
-
-
-  const episodeTableEntries = episodeObjects.map((episode) => {
+  const episodeTableEntries = episodeInfo.map((episode) => {
     return (
-      <EpisodeTableEntry key={episode.episodeId} id={episode.episodeId}
-        {...episode}
+      <EpisodeTableEntry 
+        key={episode.sys.id} 
+        id={episode.sys.id}
+        episode={episode}
       />
     )
   })

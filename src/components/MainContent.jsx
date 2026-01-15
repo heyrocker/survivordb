@@ -92,9 +92,7 @@ export default function MainContent(props) {
 
   return (
     <main>
-      <SeasonInformation 
-        seasonInfo={seasonInfo}
-      />
+      <SeasonInformation seasonInfo={seasonInfo} />
 
       <section className="season-pagination">
         <div className="pagination-btn-container">{seasonNumber > 1 && <button onClick={(event) => handleSeasonNavClick(previousSeason, event)} className="season-pagination-button season-pagination-previous">&lt; Season {previousSeason}</button>}</div>
