@@ -1,6 +1,5 @@
 import React from "react"
 import SeasonInformation from "./SeasonInformation"
-import PlayerTeaser from "./PlayerTeaser"
 import EpisodeTable from "./EpisodeTable"
 import PlayersTable from "./PlayersTable"
 import getHomePageQuery from "../queries/homePageQuery"

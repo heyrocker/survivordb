@@ -31,15 +31,13 @@ export default function getHomePageQuery(seasonNumber) {
             linkedFrom {
               appearancesCollection(order:finishPosition_ASC) {
                 items {
-                  finishPosition
-              
+                  finishPosition              
                   bootMethod
                   player {
                     sys {
                       id
                     }
                     name
-                    nickname
                   }
                 }
               }
