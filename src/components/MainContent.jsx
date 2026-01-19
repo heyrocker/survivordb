@@ -3,6 +3,7 @@ import SeasonInformation from "./SeasonInformation"
 import PlayerTeaser from "./PlayerTeaser"
 import EpisodeTable from "./EpisodeTable"
 import PlayersTable from "./PlayersTable"
+import getHomePageQuery from "../queries/homePageQuery"
 
 export default function MainContent(props) {
   const [seasonNumber, setSeasonNumber] = React.useState(props.seasonNumber)
@@ -13,52 +14,7 @@ export default function MainContent(props) {
   const graphqlEndpoint = "https://graphql.contentful.com/content/v1/spaces/"
   const space_id = "a7mk5u5e53e2"
   const contentful_access_key = import.meta.env.VITE_CONTENTFUL_ACCESS_KEY
-  const query = 
-  `query {
-    survivorSeasonCollection(where: { seasonNumber: ${seasonNumber} }, limit: 1, preview: true) {
-      items {
-        seasonNumber
-        seasonName
-        location
-        filmingStartDate
-        filmingEndDate
-        airingStartDate
-        airingEndDate
-        days
-        numberOfEpisodes
-        numberOfCastaways
-        episodesCollection {
-          items {
-            sys {
-              id
-            }
-            episodeName
-            episodeNumber
-            summary {
-              json
-            }
-            airDate
-            boots
-          }
-        }
-        linkedFrom {
-          appearancesCollection(order:finishPosition_ASC) {
-            items {
-              finishPosition
-              bootMethod
-              player {
-                sys {
-                  id
-                }
-                name
-                nickname
-              }
-            }
-          }
-        }
-      }
-    }
-  }`
+  const query = getHomePageQuery(seasonNumber)
 
   React.useEffect(() => {
     fetch(graphqlEndpoint + space_id, {
