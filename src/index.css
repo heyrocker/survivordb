@@ -136,6 +136,12 @@ h3 {
   width: 200px;
 }
 
+.grids {
+  display: grid;
+  grid-template-columns: 2fr 4fr;
+  gap: 40px
+}
+
 .list {
   border-radius: 16px;
   overflow: hidden;
@@ -149,10 +155,6 @@ h3 {
   align-items: center;
   border-top: 1px solid lightgray;
   column-gap: 25px;
-}
-
-.players-list {
-  width: 25%
 }
 
 .episode-row {

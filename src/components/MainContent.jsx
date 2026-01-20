@@ -49,11 +49,13 @@ export default function MainContent(props) {
         <div className="pagination-btn-container">{seasonNumber < 49 && <button onClick={(event) => handleSeasonNavClick(nextSeason, event)} className="season-pagination-button season-pagination-next">Season {nextSeason} &gt;</button>}</div>
       </section>
 
-      {/* Players Grid */}
-      <PlayersTable playerInfo={seasonInfo.linkedFrom.appearancesCollection.items} />
+      <section className="grids">
+        {/* Players Grid */}
+        <PlayersTable playerInfo={seasonInfo.linkedFrom.appearancesCollection.items} />
 
-      {/* Episode Table */}
-      <EpisodeTable episodeInfo={seasonInfo.episodesCollection.items} />
+        {/* Episode Table */}
+        <EpisodeTable episodeInfo={seasonInfo.episodesCollection.items} />
+      </section>
     </main>
   )
 }
