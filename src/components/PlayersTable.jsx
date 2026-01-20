@@ -41,33 +41,19 @@ function PlayerTeaser(props) {
 }
 
 function getPlayerBootIcon(bootMethod, finishPosition) {
-  let icon
-  
+  const icons = {
+    'Voted Out': <MdOutlineHowToVote />,
+    'Medically Evacuated': <FaTruckMedical />,
+    'Quit': <PiFlagLight />,
+    'Raised Flag on Edge of Extinction': <PiFlagLight />,
+    'Ejected': <FaBan />,
+    'Lost Duel on Redemption Island': < GiDuel />
+  }
+  const icon = icons[bootMethod]
+
   if (finishPosition == 1) {
     return <a title="Winner"><PiCrown /></a>
   }
   
-  switch (bootMethod) {
-    case "Voted Out":
-      icon = <MdOutlineHowToVote />
-      break
-
-    case "Medically Evacuated":
-      icon = <FaTruckMedical />
-      break
-
-    case "Quit":
-    case "Raised Flag on Edge of Extinction":
-      icon = <PiFlagLight />
-      break
-
-    case "Ejected":
-      icon = <FaBan />
-      break
-
-    case "Lost Duel on Redemption Island":
-      icon = <GiDuel />
-  }
-
   return <a title={bootMethod}>{icon}</a>
 }
