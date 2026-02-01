@@ -22,21 +22,14 @@
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: 'Survivant'; /* Choose a name for your font */
-  src: url('/assets/fonts/survivant.ttf') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-}
-
 body {
-  font-family: 'Outfit';
+  font-family: var(--font-outfit);
   background-color: var(--sand-light);
   margin: 0px;
 }
 
 .title-text {
-  font-family: 'Survivant';
+  font-family: var(--font-survivant);
   font-size: 2rem;
 }
 
@@ -69,7 +62,6 @@ nav {
 
 .main-nav > li {
   margin-right: 35px;
-  font-family: 'Outfit';
   font-size: 1.1rem;
   font-weight: 500;
   letter-spacing: 1px;
@@ -91,7 +83,7 @@ h2,
 h3 {
   margin: 0px;
   font-size: 4rem;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: var(--font-bebas-neue);
   color: var(--bark);
 }
 
@@ -125,7 +117,7 @@ h3 {
   border-radius: 4px;
   border-style: none;
   font-size: 1rem;
-  font-family: 'Outfit';
+  font-family: var(--font-outfit);
 }
 
 .season-pagination-button:hover {
