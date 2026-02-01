@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react"
 import SeasonInformation from "./SeasonInformation"
 import EpisodeTable from "./EpisodeTable"
@@ -12,8 +14,10 @@ export default function MainContent(props) {
   const previousSeason = seasonNumber - 1
   const graphqlEndpoint = "https://graphql.contentful.com/content/v1/spaces/"
   const space_id = "a7mk5u5e53e2"
-  const contentful_access_key = import.meta.env.VITE_CONTENTFUL_ACCESS_KEY
+  const contentful_access_key = process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_KEY
   const query = getHomePageQuery(seasonNumber)
+
+  console.log(contentful_access_key)
 
   React.useEffect(() => {
     fetch(graphqlEndpoint + space_id, {
