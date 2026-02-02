@@ -17,8 +17,6 @@ export default function MainContent(props) {
   const contentful_access_key = process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_KEY
   const query = getHomePageQuery(seasonNumber)
 
-  console.log(contentful_access_key)
-
   React.useEffect(() => {
     fetch(graphqlEndpoint + space_id, {
       method: "POST",
