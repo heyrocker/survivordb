@@ -1,8 +1,8 @@
 import Link from "next/link"
-import SeasonInformation from "./SeasonInformation"
-import EpisodeTable from "./EpisodeTable"
-import PlayersTable from "./PlayersTable"
-import getHomePageQuery from "../queries/homePageQuery"
+import SeasonInformation from "@/app/seasons/[seasonNumber]/SeasonInformation"
+import EpisodeTable from "@/src/components/EpisodeTable"
+import PlayersTable from "@/src/components/PlayersTable"
+import getHomePageQuery from "@/src/queries/homePageQuery"
 
 export default async function MainContent(props) {
   const seasonNumber = props.seasonNumber
