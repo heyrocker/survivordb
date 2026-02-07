@@ -1,5 +1,4 @@
 import Link from "next/link"
-import React from "react"
 import SeasonInformation from "./SeasonInformation"
 import EpisodeTable from "./EpisodeTable"
 import PlayersTable from "./PlayersTable"
@@ -28,7 +27,7 @@ export default async function MainContent(props) {
   const seasonInfo = data.data.survivorSeasonCollection.items[0]
 
   return (
-    <main>
+    <>
       <SeasonInformation seasonInfo={seasonInfo} />
 
       <section className="season-pagination">
@@ -47,6 +46,6 @@ export default async function MainContent(props) {
         {/* Episode Table */}
         <EpisodeTable episodeInfo={seasonInfo.episodesCollection.items} />
       </section>
-    </main>
+    </>
   )
 }
