@@ -1,5 +1,3 @@
-"use client"
-
 import Link from "next/link"
 import React from "react"
 import SeasonInformation from "./SeasonInformation"
@@ -7,10 +5,8 @@ import EpisodeTable from "./EpisodeTable"
 import PlayersTable from "./PlayersTable"
 import getHomePageQuery from "../queries/homePageQuery"
 
-export default function MainContent(props) {
-  const [seasonNumber, setSeasonNumber] = React.useState(props.seasonNumber)
-  const [seasonInfo, setSeasonInfo] = React.useState({})
-  
+export default async function MainContent(props) {
+  const seasonNumber = props.seasonNumber
   const nextSeason = seasonNumber + 1
   const previousSeason = seasonNumber - 1
   const graphqlEndpoint = "https://graphql.contentful.com/content/v1/spaces/"
@@ -18,30 +14,19 @@ export default function MainContent(props) {
   const contentful_access_key = process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_KEY
   const query = getHomePageQuery(seasonNumber)
 
-  React.useEffect(() => {
-    fetch(graphqlEndpoint + space_id, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        // Authenticate the request
-        Authorization: `Bearer ${contentful_access_key}`
-      },
-      // send the GraphQL query
-      body: JSON.stringify({ query }),
-    })
-      .then(response => response.json())
-      .then(data => setSeasonInfo(data.data.survivorSeasonCollection.items[0]))
-    }, [seasonNumber]
-  ) 
-
-  function handleSeasonNavClick(seasonNumber, event) {
-    setSeasonNumber(seasonNumber)
-  }
-
-  // If this is the first render before the data has been fetched, just bail.
-  if (Object.keys(seasonInfo).length === 0) {
-    return null
-  }
+  const res = await fetch(graphqlEndpoint + space_id, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      // Authenticate the request
+      Authorization: `Bearer ${contentful_access_key}`
+    },
+    // send the GraphQL query
+    body: JSON.stringify({ query }),
+  })
+  const data = await res.json()
+  console.log(data)
+  const seasonInfo = data.data.survivorSeasonCollection.items[0]
 
   return (
     <main>
