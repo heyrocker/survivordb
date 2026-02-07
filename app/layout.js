@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Outfit, Bebas_Neue } from "next/font/google"
 import Survivant from 'next/font/local'
+import Link from "next/link"
 
 const survivant = Survivant({
   src: '../assets/fonts/survivant.ttf',
@@ -28,10 +29,10 @@ export default function RootLayout({ children }) {
       <body className={[outfit.variable, bebas_neue.variable, survivant.variable].join(' ')}>
         <header>
           <nav>
-            <span className="title-text">Survivor<span className="title-highlight">DB</span></span>
+            <Link href="/"><span className="title-text">Survivor<span className="title-highlight">DB</span></span></Link>
             <ul className="main-nav">
-              <li>Seasons</li>
-              <li>Players</li>
+              <li><Link href="/seasons">Seasons</Link></li>
+              <li><Link href="/players">Players</Link></li>
             </ul>
           </nav>
         </header>

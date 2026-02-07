@@ -187,3 +187,7 @@ h3 {
   }
 }
 
+a {
+  text-decoration: none;
+  color: var(--bark-light);
+}

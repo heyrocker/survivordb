@@ -1,12 +1,5 @@
-import Header from "../src/components/Header.jsx"
-import MainContent from "../src/components/MainContent.jsx"
-
 export default function Page() {
-  const defaultSeason = 1
-
   return (
-    <>
-      <MainContent seasonNumber={defaultSeason} />
-    </>
+    <h1>This will be the home page content</h1>
   )
 }
