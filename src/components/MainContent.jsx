@@ -25,7 +25,6 @@ export default async function MainContent(props) {
     body: JSON.stringify({ query }),
   })
   const data = await res.json()
-  console.log(data)
   const seasonInfo = data.data.survivorSeasonCollection.items[0]
 
   return (
