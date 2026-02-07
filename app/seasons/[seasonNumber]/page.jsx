@@ -1,7 +1,11 @@
+import MainContent from "@/src/components/MainContent.jsx"
+
 export default async function SeasonDetailPage({params}) {
   const { seasonNumber } = await params
 
   return (
-    <h1>This is season number {seasonNumber}</h1>
+    <>
+      <MainContent seasonNumber={parseInt(seasonNumber)} />
+    </>
   )
 }

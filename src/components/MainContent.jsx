@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import React from "react"
 import SeasonInformation from "./SeasonInformation"
 import EpisodeTable from "./EpisodeTable"
@@ -47,8 +48,12 @@ export default function MainContent(props) {
       <SeasonInformation seasonInfo={seasonInfo} />
 
       <section className="season-pagination">
-        <div className="pagination-btn-container">{seasonNumber > 1 && <button onClick={(event) => handleSeasonNavClick(previousSeason, event)} className="season-pagination-button season-pagination-previous">&lt; Season {previousSeason}</button>}</div>
-        <div className="pagination-btn-container">{seasonNumber < 49 && <button onClick={(event) => handleSeasonNavClick(nextSeason, event)} className="season-pagination-button season-pagination-next">Season {nextSeason} &gt;</button>}</div>
+        <div className="pagination-btn-container">
+          {seasonNumber > 1 && <Link href={`/seasons/${previousSeason}`}><button className="season-pagination-button season-pagination-previous">&lt; Season {previousSeason}</button></Link>}
+        </div>
+        <div className="pagination-btn-container">
+          {seasonNumber < 49 && <Link href={`/seasons/${nextSeason}`}><button className="season-pagination-button season-pagination-next">Season {nextSeason} &gt;</button></Link>}
+        </div>
       </section>
 
       <section className="grids">
