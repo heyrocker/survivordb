@@ -1,3 +1,4 @@
+import { getContentfulData } from "@/src/utils"
 import Link from "next/link"
 import SeasonInformation from "@/app/seasons/[seasonNumber]/SeasonInformation"
 import EpisodeTable from "@/src/components/EpisodeTable"
@@ -9,22 +10,9 @@ export default async function MainContent(props) {
   const seasonNumber = props.seasonNumber
   const nextSeason = seasonNumber + 1
   const previousSeason = seasonNumber - 1
-  const graphqlEndpoint = "https://graphql.contentful.com/content/v1/spaces/"
-  const space_id = "a7mk5u5e53e2"
-  const contentful_access_key = process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_KEY
-  const query = getHomePageQuery(seasonNumber)
 
-  const res = await fetch(graphqlEndpoint + space_id, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      // Authenticate the request
-      Authorization: `Bearer ${contentful_access_key}`
-    },
-    // send the GraphQL query
-    body: JSON.stringify({ query }),
-  })
-  const data = await res.json()
+  const data = await getContentfulData(getHomePageQuery(seasonNumber))
+  console.log(data)
   const seasonInfo = data.data.survivorSeasonCollection.items[0]
 
   return (
