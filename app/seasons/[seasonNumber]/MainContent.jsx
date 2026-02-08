@@ -3,6 +3,7 @@ import SeasonInformation from "@/app/seasons/[seasonNumber]/SeasonInformation"
 import EpisodeTable from "@/src/components/EpisodeTable"
 import PlayersTable from "@/src/components/PlayersTable"
 import getHomePageQuery from "@/src/queries/homePageQuery"
+import SeasonJumpMenu from "@/app/seasons/[seasonNumber]/SeasonJumpMenu"
 
 export default async function MainContent(props) {
   const seasonNumber = props.seasonNumber
@@ -33,6 +34,9 @@ export default async function MainContent(props) {
       <section className="season-pagination">
         <div className="pagination-btn-container">
           {seasonNumber > 1 && <Link href={`/seasons/${previousSeason}`}><button className="season-pagination-button season-pagination-previous">&lt; Season {previousSeason}</button></Link>}
+        </div>
+        <div className="jump-menu">
+          <SeasonJumpMenu />
         </div>
         <div className="pagination-btn-container pagination-btn-next">
           {seasonNumber < 49 && <Link href={`/seasons/${nextSeason}`}><button className="season-pagination-button season-pagination-next">Season {nextSeason} &gt;</button></Link>}

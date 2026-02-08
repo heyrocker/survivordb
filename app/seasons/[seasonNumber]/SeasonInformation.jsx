@@ -1,5 +1,3 @@
-// import SeasonJumpMenu from "@/app/seasons/[seasonNumber]/SeasonJumpMenu"
-
 export default function SeasonInformation({seasonInfo}) {
   const options = { year: 'numeric', month: 'long', day: 'numeric' }; 
   const airingStartDate = new Date(seasonInfo.airingStartDate).toLocaleDateString("en-US", options)
@@ -10,13 +8,6 @@ export default function SeasonInformation({seasonInfo}) {
 
   return (
     <>
-      <section className="season-title-section">
-          <div>
-            {/* <SeasonJumpMenu /> */}
-          </div>
-
-      </section>
-
       <div className="season-header">
         <div className="season-logo">
           <img src={`/logos/survivor-season-${imageSeason}-logo.png`} height="230"/>

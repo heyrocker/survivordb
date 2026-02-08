@@ -196,3 +196,13 @@ a {
   text-decoration: none;
   color: var(--bark-light);
 }
+
+.jump-menu {
+  margin: auto;
+}
+
+.jump-menu select {
+  font-family: var(--font-outfit);
+  padding: 10px;
+  border: none;
+}
