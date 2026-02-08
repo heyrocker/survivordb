@@ -2,6 +2,7 @@ import { MdOutlineHowToVote } from "react-icons/md";
 import { PiCrown, PiFlagLight } from "react-icons/pi";
 import { FaTruckMedical, FaBan } from "react-icons/fa6";
 import { GiDuel } from "react-icons/gi";
+import Link from "next/link";
 
 export default function PlayersTable(props) {
   const playerTableEntries = props.playerInfo.map((player) => {
@@ -34,7 +35,7 @@ function PlayerTeaser(props) {
   return (
     <div className='players-row list-row'>
       <p>{props.player.finishPosition == 1 ? "Winner" : props.player.finishPosition}</p>
-      <p>{props.player.player.name} </p>
+      <p><Link href={`/players/${props.player.player.sys.id}`}>{props.player.player.name}</Link></p>
       <p>{ getPlayerBootIcon(props.player.bootMethod, props.player.finishPosition) }</p>
     </div>
   )
