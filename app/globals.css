@@ -69,13 +69,10 @@ nav {
   color: var(--bark-light);
 }
 
-.season-badge {
-  display: inline-flex;
-  background-color: var(--survivor-green-dark);
-  padding: 8px 20px;
-  margin-bottom: 20px;
-  color: white;
-  border-radius: 4px;
+.season-header {
+  display: flex;
+  gap: 100px;
+  align-items: center;
 }
 
 h1, 
@@ -102,17 +99,25 @@ h3 {
   line-height: .5;
   font-weight: 200;
   margin-bottom: 30px;
+  margin-top: 15px;
 }
 
+.season-title {
+  margin-bottom: 30px;
+}
 
 .season-pagination {
-  display: inline-flex;
+  display: flex;
   margin-bottom: 40px;
+  gap: 20px;
+}
+
+.pagination-btn-next {
+  margin-left: auto;
 }
 
 .season-pagination-button {
   padding: 8px 20px;
-  margin-right: 20px;
   background-color: var(--cream);
   border-radius: 4px;
   border-style: none;
