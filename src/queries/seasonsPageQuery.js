@@ -1,4 +1,4 @@
-export default function getHomePageQuery(seasonNumber) {
+export default function getSeasonsPageQuery(seasonNumber) {
   return (
     `  
       query {

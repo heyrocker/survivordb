@@ -3,7 +3,7 @@ import Link from "next/link"
 import SeasonInformation from "@/app/seasons/[seasonNumber]/SeasonInformation"
 import EpisodeTable from "@/src/components/EpisodeTable"
 import PlayersTable from "@/src/components/PlayersTable"
-import getHomePageQuery from "@/src/queries/homePageQuery"
+import getSeasonsPageQuery from "@/src/queries/seasonsPageQuery"
 import SeasonJumpMenu from "@/app/seasons/[seasonNumber]/SeasonJumpMenu"
 
 export default async function MainContent(props) {
@@ -11,7 +11,7 @@ export default async function MainContent(props) {
   const nextSeason = seasonNumber + 1
   const previousSeason = seasonNumber - 1
 
-  const data = await getContentfulData(getHomePageQuery(seasonNumber))
+  const data = await getContentfulData(getSeasonsPageQuery(seasonNumber))
   const seasonInfo = data.data.survivorSeasonCollection.items[0]
 
   return (
