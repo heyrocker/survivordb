@@ -1,7 +1,7 @@
-export default async function SeasonJumpMenu() {
+export default async function SeasonJumpMenu(props) {
   return (
     <div>
-      <select name="season">
+      <select name="season" value={props.seasonNumber}>
         <option value="1">Season 1: Survivor: Borneo</option>
         <option value="2">Season 2: Survivor: The Australian Outback</option>
         <option value="3">Season 3: Survivor: Africa</option>

@@ -36,7 +36,7 @@ export default async function MainContent(props) {
           {seasonNumber > 1 && <Link href={`/seasons/${previousSeason}`}><button className="season-pagination-button season-pagination-previous">&lt; Season {previousSeason}</button></Link>}
         </div>
         <div className="jump-menu">
-          <SeasonJumpMenu />
+          <SeasonJumpMenu seasonNumber={seasonNumber}/>
         </div>
         <div className="pagination-btn-container pagination-btn-next">
           {seasonNumber < 49 && <Link href={`/seasons/${nextSeason}`}><button className="season-pagination-button season-pagination-next">Season {nextSeason} &gt;</button></Link>}
