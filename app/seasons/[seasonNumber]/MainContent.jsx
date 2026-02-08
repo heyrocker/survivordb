@@ -12,7 +12,6 @@ export default async function MainContent(props) {
   const previousSeason = seasonNumber - 1
 
   const data = await getContentfulData(getHomePageQuery(seasonNumber))
-  console.log(data)
   const seasonInfo = data.data.survivorSeasonCollection.items[0]
 
   return (
