@@ -207,3 +207,8 @@ a {
   padding: 10px;
   border: none;
 }
+
+.player-info {
+  display: flex;
+  gap: 20px;
+}
