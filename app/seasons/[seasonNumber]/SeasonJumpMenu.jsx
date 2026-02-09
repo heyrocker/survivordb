@@ -20,8 +20,8 @@ export default function SeasonJumpMenu(props) {
         <option value="10">Season 10: Palau</option>
         <option value="11">Season 11: Guatemala</option>
         <option value="12">Season 12: Panama</option>
-        <option value="13">Season 13: Cook Islands</option
-        ><option value="14">Season 14: Fiji</option>
+        <option value="13">Season 13: Cook Islands</option>
+        <option value="14">Season 14: Fiji</option>
         <option value="15">Season 15: China</option>
         <option value="16">Season 16: Survivor: Micronesia – Fans vs. Favorites</option>
         <option value="17">Season 17: Survivor: Gabon</option>
