@@ -17,10 +17,10 @@ export default function SeasonInformation({seasonInfo}) {
             <h1>{seasonInfo.seasonName}</h1>
           </div>
 
-          <p><span className="information-title"><strong>Season Number:</strong></span> {seasonInfo.seasonNumber} </p>
-          <p><span className="information-title"><strong>Location:</strong></span> {seasonInfo.location} </p>
+          <p><span className="information-title"><strong>Season Number:</strong> {seasonInfo.seasonNumber}</span></p>
+          <p><span className="information-title"><strong>Location:</strong> {seasonInfo.location}</span></p>
           <p><span className="information-title"><strong>Filming Dates:</strong></span> {filmingStartDate} - {filmingEndDate}</p>
-          <p><span className="information-title"><strong>Air Dates:</strong></span> {airingStartDate} - {airingEndDate}</p>
+          <p><span className="information-title"><strong>Air Dates:</strong> {airingStartDate} - {airingEndDate}</span></p>
           <p><span className="information-title"><strong>Castaways:</strong></span> {seasonInfo.numberOfCastaways}</p>
           <p><span className="information-title"><strong>Days:</strong></span> {seasonInfo.days}</p>
           <p><span className="information-title"><strong>Episodes:</strong></span> {seasonInfo.numberOfEpisodes}</p>
