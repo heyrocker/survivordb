@@ -6,7 +6,7 @@ function handleChange(event) {
 
 export default function SeasonJumpMenu(props) {
   return (
-    <div>
+    <div className="season-jump-menu">
       <select name="season" onChange={handleChange} defaultValue={props.seasonNumber}>
         <option value="1">Season 1: Survivor: Borneo</option>
         <option value="2">Season 2: Survivor: The Australian Outback</option>
