@@ -85,6 +85,10 @@ h3 {
   color: var(--bark);
 }
 
+h1 {
+  line-height: 60px;
+}
+
 h2 {
   font-size: 3rem;
   margin-bottom: 5px;
