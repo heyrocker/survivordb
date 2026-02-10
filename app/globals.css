@@ -195,6 +195,10 @@ h3 {
     padding: 10px;
     border: none;
   }
+
+  .season-logo img {
+    height: 180px;
+  }
 }
 
 @media (min-width: 844px) {
@@ -224,8 +228,11 @@ a {
   margin: auto;
 }
 
-
 .player-info {
   display: flex;
   gap: 20px;
+}
+
+.season-logo img {
+  height: 180px;
 }

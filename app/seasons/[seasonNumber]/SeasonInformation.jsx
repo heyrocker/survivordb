@@ -10,7 +10,7 @@ export default function SeasonInformation({seasonInfo}) {
     <>
       <div className="season-header">
         <div className="season-logo">
-          <img src={`/logos/survivor-season-${imageSeason}-logo.png`} height="230"/>
+          <img src={`/logos/survivor-season-${imageSeason}-logo.png`}/>
         </div>
         <div className="season-information-section">
           <div className="season-title">
