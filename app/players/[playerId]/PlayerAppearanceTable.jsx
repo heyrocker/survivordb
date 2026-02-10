@@ -1,4 +1,5 @@
 import Link from "next/link";
+import BootMethodIcon from "@/src/components/BootMethodIcon";
 
 export default function PlayerAppearanceTable({ appearanceInfo }) {
 
@@ -35,7 +36,9 @@ function PlayerAppearanceTableEntry({ appearance }) {
     <div className='episode-row list-row'>
       <p><Link href={`/seasons/${appearance.season.seasonNumber}`}>{appearance.season.seasonNumber}: {appearance.season.seasonName}</Link></p>
       <p>{airDate}</p>
-      <p>{appearance.finishPosition} {appearance.bootMethod}</p>
+      <p>
+        {appearance.finishPosition == 1 ? "Winner" : appearance.finishPosition} <BootMethodIcon bootMethod={appearance.bootMethod} finishPosition={appearance.finishPosition} />
+      </p>
     </div>
   )
 }
