@@ -1,5 +1,6 @@
 import { getContentfulData } from "@/src/utils"
 import getPlayerDetailPageQuery from "@/src/queries/playerDetailPageQuery"
+import PlayerAppearanceTable from "./PlayerAppearanceTable"
 
 export default async function PlayerDetailPage({ params }) {
   const { playerId } = await params
@@ -12,17 +13,20 @@ export default async function PlayerDetailPage({ params }) {
   const birthday = new Date(playerInfo.birthday).toLocaleDateString("en-US", options)
 
   return (
-    <div className="player-info">
-      <div className="player-info-photo">
-        <img src="https://placehold.co/300"></img>
-      </div>
-      <div className="player-info-data">
-        <h1>{playerInfo.name}</h1>
-        <p><span className="information-title"><strong>Birthday:</strong></span> {birthday} </p>
-        {playerInfo.nickname && <p><span className="information-title"><strong>Nickname:</strong></span> {playerInfo.nickname} </p>}
-        <p>{playerInfo.bio.json.content[0].content[0].value}</p>
+    <>
+      <div className="player-info">
+        <div className="player-info-photo">
+          <img src="https://placehold.co/300"></img>
+        </div>
+        <div className="player-info-data">
+          <h1>{playerInfo.name}</h1>
+          <p><span className="information-title"><strong>Birthday:</strong></span> {birthday} </p>
+          {playerInfo.nickname && <p><span className="information-title"><strong>Nickname:</strong></span> {playerInfo.nickname} </p>}
+          <p>{playerInfo.bio.json.content[0].content[0].value}</p>
+        </div>
       </div>
 
-    </div>
+      <PlayerAppearanceTable appearanceInfo={playerInfo.linkedFrom.appearancesCollection.items} />    
+    </>
   )
 }
