@@ -1,5 +1,10 @@
+import SeasonJumpMenu from "@/src/components/SeasonJumpMenu"
+
 export default function SeasonsPage() {
   return (
-    <h1>This is the seasons landing page</h1>
+    <>
+      <h1>Choose a season to view</h1>
+      <SeasonJumpMenu />    
+    </>
   )
 }

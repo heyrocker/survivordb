@@ -4,7 +4,7 @@ import SeasonInformation from "@/app/seasons/[seasonNumber]/SeasonInformation"
 import EpisodeTable from "@/src/components/EpisodeTable"
 import PlayersTable from "@/src/components/PlayersTable"
 import getSeasonsPageQuery from "@/src/queries/seasonsPageQuery"
-import SeasonJumpMenu from "@/app/seasons/[seasonNumber]/SeasonJumpMenu"
+import SeasonJumpMenu from "@/src/components/SeasonJumpMenu"
 
 export default async function MainContent(props) {
   const seasonNumber = props.seasonNumber
