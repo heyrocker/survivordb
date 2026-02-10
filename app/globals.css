@@ -42,6 +42,7 @@ header {
   margin: 0px;
   border-bottom: 1px solid rgba(74, 63, 53, 0.1);
   padding: 10px 30px;
+  max-width: 100%;
 }
 
 main {
@@ -131,7 +132,7 @@ h3 {
 }
 
 .pagination-btn-container {
-  width: 200px;
+  /* width: 200px; */
 }
 
 .grids {
@@ -188,6 +189,12 @@ h3 {
 }
 
 @media (min-width: 769px) {
+  .players-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
   .players-grid {
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   }
