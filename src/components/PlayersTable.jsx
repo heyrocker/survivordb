@@ -3,7 +3,6 @@ import BootMethodIcon from "./BootMethodIcon";
 
 export default function PlayersTable(props) {
   const playerTableEntries = props.playerInfo.map((player) => {
-    
     return (
       <PlayerTeaser 
         key={player.player.sys.id}

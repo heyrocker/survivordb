@@ -49,19 +49,22 @@ main {
   padding: 30px;
 }
 
-nav {
+header {
   display: flex;
   align-items: center;
 }
 
-.main-nav {
+.nav {
+  margin-left: auto;
+}
+
+.menu {
   display: flex;
   flex-direction: row;
-  margin-left: auto;
   list-style: none;
 }
 
-.main-nav > li {
+.menu > li {
   margin-right: 35px;
   font-size: 1.1rem;
   font-weight: 500;
@@ -120,6 +123,7 @@ h3 {
   border-style: none;
   font-size: 1rem;
   font-family: var(--font-outfit);
+  width: 150px;
 }
 
 .season-pagination-button:hover {
@@ -202,12 +206,6 @@ h3 {
 }
 
 @media (min-width: 844px) {
-  .season-pagination {
-    display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
-    margin-bottom: 40px;
-    gap: 20px;
-  }
 
 }
 
@@ -218,6 +216,13 @@ h3 {
     align-items: center;
   }
 }
+
+  .season-pagination {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    margin-bottom: 40px;
+    gap: 20px;
+  }
 
 a {
   text-decoration: none;
@@ -236,3 +241,4 @@ a {
 .season-logo img {
   height: 180px;
 }
+

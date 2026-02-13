@@ -28,9 +28,10 @@ export default function RootLayout({ children }) {
       </head>
       <body className={[outfit.variable, bebas_neue.variable, survivant.variable].join(' ')}>
         <header>
-          <nav>
-            <Link href="/"><span className="title-text">Survivor<span className="title-highlight">DB</span></span></Link>
-            <ul className="main-nav">
+          <Link href="/"><span className="title-text">Survivor<span className="title-highlight">DB</span></span></Link>
+          <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+          <nav class="nav">
+            <ul className="menu">
               <li><Link href="/seasons">Seasons</Link></li>
               <li><Link href="/players">Players</Link></li>
             </ul>
